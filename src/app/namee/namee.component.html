@@ -1,0 +1,93 @@
+<div>
+  <h1>{{title}}</h1>
+  <div class="formsG">
+ 
+     
+       
+
+  <h3>Booking Form</h3>
+<label> Name:<br>
+  <input type="text" [(ngModel)]="ngname" placeholder="name">
+
+</label>
+<br>
+<br>
+<label> Surname:<br>
+  <input type="surname" [(ngModel)]="ngsurname"  placeholder="surname">
+</label>
+</div>
+<br>
+
+  <form>
+    Gender:
+        <select>
+            <option value="enter Gender">enter Gender
+          <option value="female">female
+          <option value="male">male
+          <option value="other">other
+        </select>
+          </form>
+          <br>
+
+  Booking:
+          <select [(ngModel)]="selectedbooking">
+              <label for="typeOfBooking">type of booking:</label> 
+               <option *ngFor="let booking of bookings; let i=index">{{booking}}</option>
+              </select>
+              
+              <div class="formsG" *ngIf = "selectedbooking === 'enter booking'">
+</div>
+          <div class="formsG" *ngIf = "selectedbooking === 'hotel'">
+
+          <input type = "radio"name = "hotelbed"value="for 1">for 1 <br>
+          <input type = "radio"name = "hotelbed"value = "for 2">for 2 <br>
+          <input type = "radio"name = "hotelbed"value = "for 3">for 3 <br>
+
+          </div>
+
+        <div class="formsG" *ngIf = "selectedbooking === 'bus'">
+          <select class ="formsG" id="locationFrom" required>
+ <label for="locationFrom">FROM:</label>
+ <option *ngFor= "let locFrom of locationFrom" >{{locFrom}}</option>
+          </select>
+        
+          <select>
+              <label for="locationTOO">TOO:</label>  
+              <option *ngFor= "let locToo of locationFrom" [value]="locToo" >{{locToo}}</option>
+                       </select>
+        </div >
+        <div class="formsG" *ngIf = "selectedbooking === 'computer'">
+
+          <input type = "radio"name = "computerr"value = "1 hour" > 1 hour <br>
+          <input type = "radio"name = "computerr"value = "2 hour"> 2 hour<br>
+          <input type = "radio"name = "computerr"value = "3 hour"> 3 hour <br>
+          </div>
+          <br>
+          <ul class="namee">
+              <li *ngFor="let add of namee"
+                [class.selected]="add === selectedAdd"
+                (click)="onSelect(add)">
+                <span class="badge">{{add.id}}</span> {{add.name}}
+              </li>
+            </ul>
+
+
+          <div *ngIf="selectedAdd">
+ 
+              <h2>{{ selectedAdd.name | uppercase }} Details</h2>
+              <div><span>id: </span>{{selectedAdd.id}}</div>
+              <div>
+                <label>name:
+                  <input [(ngModel)]="selectedHero.name" placeholder="name">
+                </label>
+              </div>
+         
+            </div>
+          <button (click)="adds()">adds</button>
+          <h2>{{name}}</h2>
+         
+          
+     
+      
+
+      

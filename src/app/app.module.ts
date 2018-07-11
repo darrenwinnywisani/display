@@ -2,13 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { NameeComponent } from './namee/namee.component';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
+ 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NameeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

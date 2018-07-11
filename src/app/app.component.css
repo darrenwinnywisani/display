@@ -1,0 +1,26 @@
+/* Application-wide Styles */
+h1 {
+    color: #369;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif;
+    font-size: 250%;
+  }
+  h2, h3 {
+    color: #444;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+  body {
+    margin: 2em;
+    
+          
+  }
+  body, input[text], button {
+    color: #888;
+    font-family: Cambria, Georgia;
+
+  }
+  /* everywhere else */
+  * { background-color:#000; font-family: 'Raleway', sans-serif;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+  }
